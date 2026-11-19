@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore English language, examination preparation, professional communication, and educator development programs at APERTURE Institute.">
+<meta name="theme-color" content="#172D49">
+<title>Our Programs | APERTURE Institute</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#172D49;
+  --violet:#6C63FF;
+  --lime:#C8F169;
+  --ivory:#F5F3EE;
+  --muted:#687487;
+  --line:rgba(23,45,73,.13);
+}
+
+* {box-sizing:border-box}
+body {
+  margin:0;
+  background:var(--ivory);
+  color:var(--navy);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.6;
+}
+a {color:inherit;text-decoration:none}
+.wrap {width:min(1180px,calc(100% - 48px));margin:auto}
+
+.topbar {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(245,243,238,.95);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(16px);
+}
+.nav {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand {
+  font:800 22px "Manrope",sans-serif;
+  letter-spacing:-1.2px;
+}
+.brand small {
+  display:block;
+  font:700 9px "Space Grotesk",sans-serif;
+  letter-spacing:3.3px;
+  color:var(--muted);
+}
+.navlinks {
+  display:flex;
+  align-items:center;
+  gap:27px;
+  font-size:13px;
+  font-weight:700;
+}
+.navlinks a:hover {color:var(--violet)}
+.nav-cta,.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 21px;
+  border-radius:999px;
+  background:var(--navy);
+  color:white;
+  font-weight:700;
+  font-size:13px;
+}
+.menu {
+  display:none;
+  border:0;
+  background:none;
+  font-size:25px;
+  color:var(--navy);
+  cursor:pointer;
+}
+
+.hero {
+  background:var(--navy);
+  color:white;
+  padding:105px 0 100px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:after {
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:50%;
+  right:-120px;
+  top:-210px;
+  box-shadow:0 0 0 42px rgba(255,255,255,.025),
+  0 0 0 84px rgba(255,255,255,.025),
+  0 0 0 126px rgba(255,255,255,.025);
+}
+.eyebrow,.kicker {
+  font:700 11px "Space Grotesk",sans-serif;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--lime);
+}
+h1,h2,h3 {
+  font-family:"Manrope",sans-serif;
+  line-height:1.12;
+  letter-spacing:-1.5px;
+}
+h1 {
+  font-size:clamp(45px,6vw,72px);
+  max-width:750px;
+  margin:22px 0;
+}
+.hero p {
+  max-width:600px;
+  color:rgba(255,255,255,.75);
+  font-size:17px;
+}
+.section {padding:90px 0}
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:35px;
+  margin-bottom:42px;
+}
+.section-head h2 {
+  font-size:clamp(34px,4vw,48px);
+  margin:12px 0 0;
+}
+.section-head p {
+  max-width:390px;
+  color:var(--muted);
+}
+.kicker {color:var(--violet)}
+
+.program-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.program-card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:34px;
+  min-height:285px;
+  display:flex;
+  flex-direction:column;
+  transition:.25s;
+}
+.program-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px rgba(23,45,73,.09);
+}
+.number {
+  color:var(--violet);
+  font:700 12px "Space Grotesk",sans-serif;
+  letter-spacing:2px;
+}
+.program-card h3 {
+  font-size:27px;
+  margin:24px 0 12px;
+}
+.program-card p {
+  color:var(--muted);
+  font-size:14px;
+  max-width:460px;
+}
+.card-link {
+  margin-top:auto;
+  padding-top:20px;
+  color:var(--violet);
+  font-size:13px;
+  font-weight:800;
+}
+.note {
+  background:#eae9e3;
+  padding:55px 0;
+}
+.note h2 {
+  font-size:32px;
+  margin:0 0 15px;
+}
+.note p {
+  max-width:700px;
+  color:#58677a;
+}
+.cta {padding:80px 0}
+.cta-panel {
+  background:var(--lime);
+  border-radius:26px;
+  padding:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+.cta-panel h2 {
+  font-size:clamp(30px,4vw,43px);
+  margin:10px 0;
+}
+.cta-panel p {color:#43552a}
+footer {
+  background:#101f33;
+  color:white;
+  padding:45px 0 25px;
+}
+.footer-top {
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  padding-bottom:35px;
+}
+.footer-brand p {
+  color:rgba(255,255,255,.6);
+  font-size:13px;
+  max-width:300px;
+}
+.footer-links {
+  display:flex;
+  gap:55px;
+}
+.footer-col strong {
+  display:block;
+  color:var(--lime);
+  font:700 11px "Space Grotesk",sans-serif;
+  letter-spacing:1.5px;
+  margin-bottom:15px;
+}
+.footer-col a,.footer-col span {
+  display:block;
+  color:rgba(255,255,255,.72);
+  font-size:13px;
+  margin:8px 0;
+}
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,.15);
+  padding-top:20px;
+  color:rgba(255,255,255,.5);
+  font-size:11px;
+}
+
+@media(max-width:800px) {
+  .navlinks {gap:12px;font-size:11px}
+  .section-head {display:block}
+  .section-head p {margin-top:18px}
+}
+@media(max-width:680px) {
+  .wrap {width:calc(100% - 34px)}
+  .nav {min-height:70px}
+  .menu {display:block}
+  .navlinks {
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:var(--ivory);
+    padding:22px;
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .navlinks.open {display:flex}
+  .hero {padding:75px 0}
+  .hero p {font-size:15px}
+  .section {padding:65px 0}
+  .program-grid {grid-template-columns:1fr}
+  .program-card {min-height:250px;padding:27px}
+  .cta-panel {display:block;padding:32px 25px}
+  .cta-panel .btn {margin-top:20px}
+  .footer-top {display:block}
+  .footer-links {margin-top:28px;gap:30px;flex-wrap:wrap}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="wrap nav">
+<a class="brand" href="../index.html">
+APERTURE<small>INSTITUTE</small>
+</a>
+
+<button class="menu" aria-label="Toggle navigation"
+aria-expanded="false" onclick="toggleMenu()">☰</button>
+
+<nav class="navlinks" id="navlinks">
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="index.html">Programs</a>
+<a href="../learning-experience.html">Learning Experience</a>
+<a href="../faqs.html">FAQs</a>
+<a class="nav-cta" href="../contact.html">Make an inquiry ↗</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="wrap">
+<div class="eyebrow">Explore APERTURE</div>
+<h1>Find your direction.<br>Expand your <span style="color:var(--lime)">possibilities.</span></h1>
+<p>Discover learning pathways designed to strengthen your English, prepare you for important examinations, advance your professional communication, and develop your teaching practice.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+
+<div class="section-head">
+<div>
+<div class="kicker">Our academic programs</div>
+<h2>Learning for every<br>next step.</h2>
+</div>
+<p>Build practical knowledge, develop meaningful skills, and move forward with learning experiences shaped around your goals.</p>
+</div>
+
+<div class="program-grid">
+
+<article class="program-card">
+<div class="number">01 / LANGUAGE DEVELOPMENT</div>
+<h3>APERTURE English</h3>
+<p>Develop practical English skills for everyday communication, academic success, and confident self-expression.</p>
+<a class="card-link" href="english.html">Explore English →</a>
+</article>
+
+<article class="program-card">
+<div class="number">02 / EXAMINATION SUCCESS</div>
+<h3>Examination Preparation</h3>
+<p>Prepare strategically for IELTS, TOEFL, and other English proficiency examinations through focused instruction and purposeful practice.</p>
+<a class="card-link" href="examination-preparation.html">Explore exam preparation →</a>
+</article>
+
+<article class="program-card">
+<div class="number">03 / PROFESSIONAL GROWTH</div>
+<h3>APERTURE Professional</h3>
+<p>Communicate with clarity and confidence in the workplace, professional interactions, and international environments.</p>
+<a class="card-link" href="professional.html">Explore professional English →</a>
+</article>
+
+<article class="program-card">
+<div class="number">04 / EDUCATOR DEVELOPMENT</div>
+<h3>Educator Development</h3>
+<p>Strengthen teaching practice through methodology, language awareness, instructional skills, and continuous professional development.</p>
+<a class="card-link" href="educator-development.html">Explore educator development →</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="note">
+<div class="wrap">
+<div class="kicker">The APERTURE approach</div>
+<h2>Progress begins with the right direction.</h2>
+<p>Every learner has different goals. Explore our programs to find a learning pathway that aligns with your ambitions, interests, and next steps.</p>
+</div>
+</section>
+
+<section class="cta">
+<div class="wrap">
+<div class="cta-panel">
+<div>
+<div class="kicker">Your next chapter starts here</div>
+<h2>Ready to explore your possibilities?</h2>
+<p>Tell us what you want to achieve. We'll help you find a suitable learning path.</p>
+</div>
+<a class="btn" href="../contact.html">Start an inquiry ↗</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-brand">
+<a class="brand" href="../index.html">APERTURE<small>INSTITUTE</small></a>
+<p>Expanding knowledge. Empowering people. Online learning for a world of possibilities.</p>
+</div>
+
+<div class="footer-links">
+<div class="footer-col">
+<strong>EXPLORE</strong>
+<a href="../about.html">About us</a>
+<a href="index.html">Programs</a>
+<a href="../learning-experience.html">Learning experience</a>
+</div>
+<div class="footer-col">
+<strong>CONNECT</strong>
+<a href="../faqs.html">FAQs</a>
+<a href="../contact.html">Contact & inquiries</a>
+<span>Online institution</span>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+© <span id="year"></span> APERTURE Institute. All rights reserved.
+</div>
+</div>
+</footer>
+
+<script>
+function toggleMenu() {
+const nav=document.getElementById('navlinks');
+const btn=document.querySelector('.menu');
+const open=nav.classList.toggle('open');
+btn.setAttribute('aria-expanded',String(open));
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
